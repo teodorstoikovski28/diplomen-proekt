@@ -1,2 +1,19 @@
-C:\Users\teodo
+@{
+    ViewData["Title"] = "Начало";
+}
 
+<section class="py-5">
+    <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+            <p class="text-uppercase text-success fw-semibold mb-2">Услуги за дома</p>
+            <h1 class="display-5 fw-bold">Намери подходящ майстор за своя дом</h1>
+            <p class="lead text-muted mt-3">
+                Разгледай профили и услуги, изпрати заявка и сравни предложенията на домашни майстори.
+            </p>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+                <a class="btn btn-success btn-lg" asp-controller="Masters" asp-action="Index">Разгледай майсторите</a>
+                <a class="btn btn-outline-secondary btn-lg" asp-controller="Categories" asp-action="Index">Виж услугите</a>
+            </div>
+        </div>
+    </div>
+</section>

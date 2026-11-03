@@ -1,0 +1,42 @@
+@page
+@model Microsoft.AspNetCore.Identity.UI.V5.Pages.Account.Internal.LoginModel
+
+@{
+    ViewData["Title"] = "Вход";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <h1>@ViewData["Title"]</h1>
+        <section>
+            <h2 class="h4 mb-3">Влез в профила си</h2>
+            <form id="account" method="post" asp-route-returnUrl="@Model.ReturnUrl">
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                    <label asp-for="Input.Email" class="form-label">Имейл</label>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="Парола" />
+                    <label asp-for="Input.Password" class="form-label">Парола</label>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div class="form-check mb-3">
+                    <input asp-for="Input.RememberMe" class="form-check-input" />
+                    <label asp-for="Input.RememberMe" class="form-check-label">Запомни ме</label>
+                </div>
+                <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-success">Вход</button>
+                <div class="mt-3">
+                    <p><a asp-page="./ForgotPassword">Забравена парола?</a></p>
+                    <p><a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Създай нов профил</a></p>
+                    <p><a asp-page="./ResendEmailConfirmation">Изпрати отново потвърждението на имейла</a></p>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
