@@ -1,0 +1,21 @@
+:root {
+  --brand-ink: #173b3b;
+  --brand-green: #176b5b;
+  --brand-soft: #e9f4ef;
+  --brand-gold: #f2bd5b;
+}
+html { font-size: 16px; }
+body { color: #203535; background: #fbfcfb; }
+.navbar-brand { color: var(--brand-ink); letter-spacing: -.02em; }
+.nav-link { font-weight: 500; }
+.btn-primary { --bs-btn-bg: var(--brand-green); --bs-btn-border-color: var(--brand-green); --bs-btn-hover-bg: #115446; --bs-btn-hover-border-color: #115446; }
+.btn-outline-primary { --bs-btn-color: var(--brand-green); --bs-btn-border-color: var(--brand-green); --bs-btn-hover-bg: var(--brand-green); --bs-btn-hover-border-color: var(--brand-green); }
+.hero-panel { background: linear-gradient(130deg, #e7f2ed 0%, #f4f0df 100%); border: 1px solid #dce9e2; }
+.hero-panel h1 { color: var(--brand-ink); max-width: 17ch; }
+.eyebrow { color: var(--brand-green); text-transform: uppercase; font-size: .78rem; font-weight: 700; letter-spacing: .12em; }
+.hero-note, .feature-card { background: rgba(255,255,255,.82); border: 1px solid #dce9e2; }
+.hero-note li + li { margin-top: .5rem; }
+footer { background: #fff; }
+
+.error-panel { max-width: 720px; background: #fff; border: 1px solid #dce9e2; box-shadow: 0 .75rem 2rem rgba(23,59,59,.06); }
+

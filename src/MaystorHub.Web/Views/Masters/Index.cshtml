@@ -1,0 +1,11 @@
+@model IEnumerable<MaystorHub.Web.Models.MasterProfile>
+@{ ViewData["Title"] = "Майстори"; }
+<h1>Одобрени майстори</h1>
+<p class="text-muted">Профилите в този списък се показват след административно одобрение.</p>
+<div class="row g-3">
+@foreach (var master in Model)
+{
+    <div class="col-md-6 col-lg-4"><article class="card h-100 shadow-sm"><div class="card-body"><h2 class="h5">@master.DisplayName</h2><p class="mb-1">@master.City · Опит: @master.YearsExperience г.</p><p>@master.Bio</p><ul class="small">@foreach (var service in master.Services) { <li>@service.ServiceCategory?.Name</li> }</ul></div></article></div>
+}
+</div>
+@if (!Model.Any()) { <div class="alert alert-light border">Все още няма одобрени профили.</div> }

@@ -1,0 +1,10 @@
+@model IEnumerable<MaystorHub.Web.Models.Review>
+@{ ViewData["Title"] = "Оценки"; }
+<h1>Оценки</h1>
+<div class="row g-3">
+@foreach (var review in Model)
+{
+    <div class="col-md-6"><article class="card h-100"><div class="card-body"><h2 class="h6">@review.MasterProfile?.DisplayName</h2><p class="mb-1">Оценка: @review.Rating / 5</p><p>@review.Comment</p><small class="text-muted">@review.CreatedAtUtc.ToLocalTime().ToString("dd.MM.yyyy")</small></div></article></div>
+}
+</div>
+@if (!Model.Any()) { <div class="alert alert-light border">Оценки ще се добавят след завършени поръчки.</div> }
